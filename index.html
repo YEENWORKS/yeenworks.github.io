@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>YEENWORKS</title>
+    <link rel="icon" href="./assets/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: linear-gradient(to bottom, #fff200 25%, #ffffff 25%, #ffffff 50%, #9b59d1 50%, #9b59d1 75%, #000000 75%);
+            color: white;
+            background-size: 100% 100%;
+        }
+            @keyframes gradientBG {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+            .rounded-rectangle {
+                background-color: rgba(169, 169, 169, 0.8);
+                border-radius: 20px;
+                padding: 20px;
+                margin: 10px auto;
+                max-width: 80%;
+                transition: transform 0.3s ease;
+            }
+            .rounded-rectangle:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            }
+            .frosted-glass {
+                background-color: rgba(169, 169, 169, 0.5);
+                backdrop-filter: blur(10px);
+                padding: 20px;
+                margin: 10px auto;
+                max-width: 80%;
+            }
+            .social-links {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .social-link {
+                margin: 0 10px;
+                color: white;
+                text-decoration: none;
+            }
+            .social-link:hover {
+                color: #ffcc00;
+            }
+            .social-icon {
+                margin-right: 8px;
+            }
+            .youtube-player {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            .youtube-player iframe {
+                width: 280px;
+                height: 157.5px;
+            }
+            /* Additional styles for YEENWORKS text */
+            .yeenworks-text {
+                font-size: 78px;
+                text-align: center;
+                font-family: 'Orbitron', sans-serif;
+                color: black;
+                text-shadow: 2px 2px white;
+                font-style: italic;
+            }
+            /* Additional styles for login button */
+            .login-button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background-color: rgba(169, 169, 169, 0.8);
+                border-radius: 20px;
+                padding: 10px 20px;
+                color: white;
+                text-decoration: none;
+                transition: transform 0.3s ease;
+            }
+            .login-button:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <header class="text-center">
+            <h1 class="yeenworks-text">YEENWORKS</h1>
+            <a href="login" class="login-button">Login</a>
+        </header>
+    </body>
+    </html>
+    <main>
+        <section class="text-center py-12">
+            <body>
+                <img src="./assets/card.png" alt="ID Card" style="display: block; margin: 0 auto; width: 400px;">
+        </section>
+
+        <section class="py-12">
+            <div class="flex justify-center">
+                <div class="frosted-glass rounded-rectangle">
+                    <h3>YO someone went to my website! you're honestly poggers</h3>
+                    <p>I'll put more here later but for now you get this. oops. come say hi!</p> 
+                </div>
+            </div>
+        </section>
+
+        <section class="social-links py-12">
+            <a href="#" class="social-link">
+                <i class="fas fa-tools social-icon"></i>YouTube (Coming Soon)
+            </a>
+            <a href="https://t.me/freakyfluff" class="social-link">
+                <i class="fab fa-telegram-plane social-icon"></i>Telegram
+            </a>
+            <a href="https://discord.com/users/freakyfluff" class="social-link">
+                <i class="fab fa-discord social-icon"></i>Discord
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Special:Random" class="social-link">
+                <i class="fas fa-globe social-icon"></i>Read something
+            </a>
+        </section>
+
+        <div class="youtube-player">
+            <div style="border: 2px solid white; padding: 10px;">
+                <iframe width="280" height="157.5" src="https://www.youtube.com/embed/OYlX0Alc3AQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen volume="0.5"></iframe>
+        </div>
+    </main>
+
+    <footer class="text-center py-8">
+        <p>estimate how much water you've had today, in fluid ounces:</p>
+        <div>
+            <input type="text" id="water-input" placeholder="Enter amount (Fl Oz.)">
+            <button onclick="calculateWaterIntake()">Enter</button>
+        </div>
+        <p id="water-intake-message"></p>
+        <style>
+            input[type="text"] {
+                color: black;
+            }
+        </style>
+        <script>
+            function calculateWaterIntake() {
+                const waterInput = document.getElementById("water-input").value;
+                const recommendedIntake = 125; // Recommended daily water intake in ounces
+
+                try {
+                    const parsedInput = parseFloat(waterInput);
+
+                    if (isNaN(parsedInput)) {
+                        throw new Error("Invalid input");
+                    }
+
+                    if (parsedInput >= recommendedIntake) {
+                        document.getElementById("water-intake-message").innerText = "fuck yeah. champion";
+                    } else {
+                        const remainingIntake = recommendedIntake - parsedInput;
+                        document.getElementById("water-intake-message").innerText = `you should drink ${remainingIntake} more ounces of water throughout the rest of the day to reach the recommended daily water intake. remember: fortune favors the hydrated`;
+                    }
+                } catch (error) {
+                    document.getElementById("water-intake-message").innerText = "";
+                    const audio = new Audio("https://www.w3schools.com/html/horse.ogg");
+                    audio.play();
+                }
+            }
+        </script>
+    </footer>
+    </body>
+    </html>
