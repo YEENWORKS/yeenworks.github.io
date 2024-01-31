@@ -63,7 +63,6 @@
                 width: 280px;
                 height: 157.5px;
             }
-            /* Additional styles for YEENWORKS text */
             .yeenworks-text {
                 font-size: 78px;
                 text-align: center;
@@ -72,7 +71,6 @@
                 text-shadow: 2px 2px white;
                 font-style: italic;
             }
-            /* Additional styles for login button */
             .login-button {
                 position: absolute;
                 top: 10px;
@@ -104,12 +102,20 @@
         </section>
 
         <section class="py-12">
-            <div class="flex justify-center">
-                <div class="frosted-glass rounded-rectangle">
-                    <h3>YO someone went to my website! you're honestly poggers</h3>
-                    <p>I'll put more here later but for now you get this. oops. come say hi!</p> 
-                </div>
+            <audio id="woof-sound" src="woof.mp3" style="display: none;"></audio>
+
+            <div class="frosted-glass rounded-rectangle" onclick="playWoofSound()">
+                <h3>YO someone went to my website! you're honestly poggers</h3>
+                <p>I'll put more here later but for now you get this. oops. come say hi!</p> 
             </div>
+            
+            <script>
+            function playWoofSound() {
+                var sound = document.getElementById("woof-sound");
+                sound.play();
+            }
+            </script>
+
         </section>
 
         <section class="social-links py-12">
