@@ -1,0 +1,68 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.dropdown {
+  display: none;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.dropdown a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.dropdown a:hover {
+  background-color: #555;
+}
