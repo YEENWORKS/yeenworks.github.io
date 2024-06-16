@@ -10,16 +10,7 @@ body {
 }
 
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: left;
-  display: flex;
-  align-items: center;
-}
-
-header .header-text {
-  margin-left: 1rem;
+  padding: 1rem 0;
 }
 
 header h1 {
@@ -36,17 +27,11 @@ header h1 {
 
 main {
   flex: 1;
-  padding: 1rem;
+  padding: 2rem 0;
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  padding: 1rem 0;
 }
 
 button {
@@ -63,24 +48,8 @@ button:hover {
   background-color: #0056b3;
 }
 
-.dropdown-menu {
-  display: none;
-  background-color: #333;
-  color: #fff;
+.card-panel {
   padding: 1rem;
-  border-radius: 4px;
-}
-
-.dropdown-item {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  padding: 0.5rem 0;
-}
-
-.dropdown-item:hover {
-  background-color: #555;
-  color: #fff;
 }
 
 a {
